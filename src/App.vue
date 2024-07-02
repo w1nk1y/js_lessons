@@ -19,23 +19,22 @@ export default {
       posts: []
     }
   },
+  async created() {
+    this.posts = (await axios.get('https://localhost:7243/api/Posts')).data;
+
+  },
 
   methods: {
-    NewPostCreated(data) {
-      this.posts = this.posts.reverse();
-      this.posts.push({
-        "user_id": this.posts.at(0).user_id,
-        "id": this.posts.at(-1).id + 1,
-        "title": data.title,
-        "body": data.body
-      });
-      this.posts = this.posts.reverse();
-    }
-  },
-  async created() {
-    const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
-    this.posts = response.data.reverse();
+  NewPostCreated(data) {
+    this.posts.unshift({
+      "user_id": this.posts.at(0).user_id,
+      "id": this.posts.at(0).id - 1,
+      "title": data.title,
+      "body": data.body
+    });
   }
+}
+ 
 }
 
 </script>

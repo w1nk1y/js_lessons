@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import mainComponent from "@/components/postS.vue"
+import mainComponent from "@/components/ListOfPosts.vue"
 
-import makePostComponent from "@/components/make.vue"
+import makePostComponent from "@/components/CreatePost.vue"
 
-import viewComponent from "@/components/show.vue"
+import viewComponent from "@/components/ViewAPost.vue"
 
 const routes = [
     {
