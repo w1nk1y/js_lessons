@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>RuGramm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="post-card">
+        <div class="header">
+            <div class="user-icon"></div>  
+            <ul>
+                <li><b><span class="username">Yung_Dima</span></b></li>
+                <li><span class ="location">Sochi, Russia</span></li>
+            </ul>          
+        </div>
+
+        <div id="container"><img src="photo.jpg" alt="photo" class="post-image">
+        </div>
+
+        <div class="actions">
+            <button class="button" onclick="Like()">
+                <img id="like-icon" src="heart.svg" alt="Like">
+            </button>
+
+            <button class="button" onclick="addComment()">
+                <img class="action-icon" src="comment.svg" alt="Comment">
+            </button>
+
+            <button  class="button">
+                <img class="action-icon" src="share.svg" alt="Share">
+            </button>
+           
+        </div>
+        <span id="counter">0</span>
+        <div class="post-text">
+            <span id="author">Yung_Dima</span>
+            <span id="text">йоу это мой тру гэнгста бро</span>
+        </div>
+        <div class="list-comments">
+            <div id="comment-block"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
